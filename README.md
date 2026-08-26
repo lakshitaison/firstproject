@@ -1,4 +1,4 @@
-# 🎗️ Breast Cancer Prediction using PCA and SVD
+#  Breast Cancer Prediction using PCA and SVD
 
 A machine learning mini-project that predicts breast cancer patient outcomes (Alive vs. Dead) using dimensionality reduction techniques — **PCA (Principal Component Analysis)** and **SVD (Singular Value Decomposition)** — combined with an ensemble of classifiers.
 
@@ -67,22 +67,8 @@ svd = bundle['svd']
 best_model = bundle['best_model']
 ```
 
-## Project Structure
-
-```
-.
-├── Breast_Cancer_Prediction_PCA_SVD.ipynb   # Main notebook
-├── breastcancer_updated.csv                 # Dataset (not included — provide your own)
-├── breast_cancer_model.pkl                  # Saved model bundle (generated after running)
-└── README.md
-```
-
 ## Notes
 
 - PCA requires dense, scaled numeric input — hence the `StandardScaler` step before dimensionality reduction.
 - SVD works directly on the raw (scaled) matrix and can also handle sparse data, making it a useful complement to PCA.
 - The final feature set stacks PCA and SVD outputs together to give the models a richer, combined representation of the data.
-
-## Disclaimer
-
-This project is for educational purposes only and is **not intended for real-world clinical or diagnostic use**. Predictions are based on a limited dataset and should not be used to inform medical decisions.
